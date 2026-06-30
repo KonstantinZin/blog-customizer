@@ -26,11 +26,19 @@
 }
 
 .form > * + * {
-	margin-top: 50px;
+	margin-top: 48px;
 }
 
 .bottomContainer {
 	display: flex;
 	justify-content: space-between;
 	margin-top: 207px;
+}
+
+.line {
+	margin-top: 50px;
+}
+
+.line > * {
+	background: #d7d7d7;
 }

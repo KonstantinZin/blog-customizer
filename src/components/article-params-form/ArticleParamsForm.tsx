@@ -15,6 +15,7 @@ import {
 	ArticleStateType,
 	defaultArticleState,
 } from '../../constants/articleProps';
+import { Separator } from '../../ui/separator';
 
 type ArticleParamsFormProps = {
 	currentState: ArticleStateType;
@@ -116,19 +117,22 @@ export const ArticleParamsForm = ({
 							}))
 						}
 					/>
-					<div style={{ paddingTop: '50px' }}>
-						<Select
-							title='Цвет фона'
-							options={backgroundColors}
-							selected={localState.backgroundColor}
-							onChange={(option) =>
-								setLocalState((prev) => ({
-									...prev,
-									backgroundColor: option,
-								}))
-							}
-						/>
+
+					<div className={styles.line}>
+						<Separator />
 					</div>
+					<Select
+						title='Цвет фона'
+						options={backgroundColors}
+						selected={localState.backgroundColor}
+						onChange={(option) =>
+							setLocalState((prev) => ({
+								...prev,
+								backgroundColor: option,
+							}))
+						}
+					/>
+
 					<Select
 						title='Ширина контента'
 						options={contentWidthArr}
